@@ -1,4 +1,5 @@
 import Vue from 'vue'
+
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -18,14 +19,28 @@ Vue.use(Vuelidate)
 //3. 引入axios请求
 import axios from 'axios'
 Vue.prototype.$axios = axios
-axios.defaults.baseURL = "http://timemeetyou.com:8889/api/private/v1/"
-
+// axios.defaults.baseURL = "http://timemeetyou.com:8889/api/private/v1/"
+axios.defaults.baseURL = "https://www.liulongbin.top:8888/api/private/v1/"
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+
+// 4. element ui 完整引入
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+
+Vue.use(ElementUI);
+
+// ------自定义的 
 // 引入全局样式
 import './assets/css/global.css'
+
 
 Vue.config.productionTip = false
 

@@ -47,6 +47,15 @@ git push -u origin master
 
 8. 创建分支开发
 git checkout -b login
+分支
+git status 
+git branch
+git commit -m "注释内容"
+git checkout master 
+git merge login
+9.推送本地仓
+
+git push -u origin login
 
 #### 常用命令
 ```

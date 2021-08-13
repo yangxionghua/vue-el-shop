@@ -144,13 +144,10 @@ export default {
       this.showAlert();
       //   成功后 保存登录令牌token
       window.sessionStorage.setItem("token", res.data.token);
+      console.log(res.data.token);
       //   跳转页面
       this.$router.push("/home");
-      // 登录成功清空表单
-      this.form = {
-        username: null,
-        password: null,
-      };
+      
     },
 
     countDownChanged(dismissCountDown) {

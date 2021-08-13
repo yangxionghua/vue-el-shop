@@ -13,6 +13,8 @@
         :model="loginForm"
         class="login_form"
       >
+
+
         <b-form-group
           id="fieldset-1"
           description="Let us know your name."
@@ -28,7 +30,7 @@
             :state="state"
             trim
           ></b-form-input>
-        </b-form-group>
+
 
         <!-- <label for="feedback-user">User ID</label>
         <b-form-input
@@ -42,6 +44,7 @@
         <b-form-valid-feedback :state="validation">
           Looks Good.
         </b-form-valid-feedback> -->
+
 
         <label for="text-password">Password</label>
         <b-form-input
@@ -62,6 +65,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "login",
   data() {

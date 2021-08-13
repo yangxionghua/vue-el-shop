@@ -13,6 +13,9 @@
   /* text-align: center; */
   color: #2c3e50;
 }
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
 
 
 </style>
