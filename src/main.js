@@ -19,8 +19,8 @@ Vue.use(Vuelidate)
 //3. 引入axios请求
 import axios from 'axios'
 Vue.prototype.$axios = axios
-// axios.defaults.baseURL = "http://timemeetyou.com:8889/api/private/v1/"
-axios.defaults.baseURL = "https://www.liulongbin.top:8888/api/private/v1/"
+axios.defaults.baseURL = "http://timemeetyou.com:8889/api/private/v1/"
+// axios.defaults.baseURL = "https://www.liulongbin.top:8888/api/private/v1/"
 axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config

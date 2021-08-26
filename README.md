@@ -46,16 +46,21 @@ $ git commit -m ‘first commit’ #-m 表示添加注释；‘first commit’�
 git push -u origin master
 
 8. 创建分支开发
-git checkout -b login
-分支
+git branch 查看分支
+git checkout -b branch 分支名 -----创建分支
+git add . 添加到暂存区
+git commit -m "注释信息"
+git push -u origin branch 云端仓库别名
+
 git status 
 git branch
 git commit -m "注释内容"
 git checkout master 
 git merge login
-9.推送本地仓
-
-git push -u origin login
+9. 合并分支
+git checkout master 切换到主分支
+git merge branch 分支名
+git push 推送到云仓库
 
 #### 常用命令
 ```
